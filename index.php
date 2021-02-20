@@ -30,15 +30,17 @@
             <th>Action</th>
           </thead>
           <tbody>
+            <?php foreach ($result as $res) { ?>
             <tr>
-              <td>text</td>
-              <td>text</td>
-              <td>text</td>
+              <td><?php echo $res->id; ?></td>
+              <td><?php echo $res->name; ?></td>
+              <td><?php echo $res->email; ?></td>
               <td>
                 <a href="" class="btn btn-success"><i class="fa fa-edit"></i></a>
                 <a href="" class="btn btn-danger"><i class="fa fa-trash-alt"></i></a>
               </td>
             </tr>
+            <?php } ?>
           </tbody>
         </table>
       </div>
