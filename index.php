@@ -50,7 +50,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                    <form action="" method="post">
+                    <form action="?id=<?php echo $res->id; ?>" method="post">
                       <div class="form-group">
                         <small>Имя</small>
                         <input type="text" class="form-control" name="name"  value="<?php echo $res->name; ?>">
@@ -69,6 +69,34 @@
               </div>
             </div>
             <!-- Modal edit -->
+            <!-- Modal delete -->
+            <div class="modal fade" id="delete<?php echo $res->id; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Изменить запись</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form action="?id=<?php echo $res->id; ?>" method="post">
+                      <div class="form-group">
+                        <small>Имя</small>
+                        <input type="text" class="form-control" name="name"  value="<?php echo $res->name; ?>">
+                      </div>
+                      <div class="form-group">
+                        <small>Email</small>
+                        <input type="text" class="form-control" name="email" value="<?php echo $res->email; ?>" >
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="submit" class="btn btn-primary" name="delete">Изменить</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal delete -->
             <?php } ?>
           </tbody>
         </table>
